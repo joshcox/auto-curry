@@ -1,29 +1,34 @@
 {
-    "name": "auto-curry",
-    "version": "0.0.0",
-    "description": "## Example ```javaScript const add = (x, y) => x + y; const add1 = add(1);",
-    "main": "play.js",
-    "scripts": {
-        "test": "mocha --reporter dot --ui tdd --exit --compilers js:babel"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/joshcox/auto-curry.git"
-    },
-    "dependencies": {
-        "babel-runtime": "^6.26.0"
-    },
-    "author": "Chump n' Dingus",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/joshcox/auto-curry/issues"
-    },
-    "homepage": "https://github.com/joshcox/auto-curry#readme",
-    "devDependencies": {
-        "babel-helper-plugin-test-runner": "^6.24.1",
-        "babel-preset-es2015": "^6.24.1",
-        "babel-preset-stage-0": "^6.24.1",
-        "babel-register": "^6.26.0",
-        "mocha": "^4.0.1"
-    }
+  "name": "auto-curry",
+  "version": "0.0.0",
+  "description": "## Example ```javaScript const add = (x, y) => x + y; const add1 = add(1);",
+  "main": "play.js",
+  "scripts": {
+    "build": "babel src/index.js -o lib/index.js",
+    "build:watch": "npm run build -w",
+    "test": "mocha --compilers js:babel-register",
+    "test:watch": "npm test -w",
+    "lint": "eslint ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshcox/auto-curry.git"
+  },
+  "author": "Chump n' Dingus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshcox/auto-curry/issues"
+  },
+  "homepage": "https://github.com/joshcox/auto-curry#readme",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-register": "6.26.0",
+    "chai": "4.1.2",
+    "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "mocha": "4.0.1"
+  }
 }

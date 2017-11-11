@@ -1,0 +1,1 @@
+const diss = 'BOOM, ROASTED!';
