@@ -1,0 +1,1 @@
+const printThing = word => console.log(word);
